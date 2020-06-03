@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="420dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="#3D5AFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/header_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingTop="10px"
+            android:text="Calorie Track"
+            android:textColor="#EEEEEE"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calender"
+        android:layout_width="421dp"
+        android:layout_height="124dp"
+        android:background="#3D5AFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <TextView
+            android:id="@+id/activity_main_text_day_of_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="XX"
+            android:textColor="#F8F7F7"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:onClick="previousDay"
+            android:src="@drawable/ic_left" />
+
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:onClick="nextDay"
+            android:src="@drawable/ic_right" />
+
+
+        <LinearLayout
+            android:id="@+id/activity_main_view_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_main_text_day_of_month"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="#FFFFFF" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_date_range_white_24dp" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="#FFFFFF" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_main_text_day_of_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_main_view_separator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="XXXXXXXXXXX"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/calorie_view"
+        android:layout_width="417dp"
+        android:layout_height="78dp"
+        android:background="#3D5AFE"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calender">
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Calorie"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp">
+
+                    </TextView>
+                    
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/totalCal"
+                        android:textColor="#FFFFFF">
+                    </TextView>
+
+            </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#e1e5e9"
+                android:layout_width="1px"
+                android:layout_height="24dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Carbs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp">
+
+                </TextView>
+
+                <TextView
+                    android:text="0 gms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalCarbs"
+                    android:textColor="#FFFFFF">
+                </TextView>
+            </LinearLayout>
+            <View
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#e1e5e9"
+                android:layout_width="1px"
+                android:layout_height="24dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Fats"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:text="0 gms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalFats"
+                    android:textColor="#FFFFFF">
+                </TextView>
+            </LinearLayout>
+            <View
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:background="#e1e5e9"
+                android:layout_width="1px"
+                android:layout_height="24dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Protiens"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:text="0 gms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/totalProts"
+                    android:textColor="#FFFFFF">
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calorie_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="512px"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_view" />
+
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="69dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/calorie_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_recycler_view"
+        app:layout_constraintVertical_bias="0.451"
+        app:srcCompat="@drawable/camera_icon" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="258dp"
+        android:layout_marginBottom="198dp"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/camera_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorie_recycler_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "16338310275",
+    "firebase_url": "https://healthx-8ce8b.firebaseio.com",
+    "project_id": "healthx-8ce8b",
+    "storage_bucket": "healthx-8ce8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16338310275:android:7ad1bac7e61b161c8137b6",
+        "android_client_info": {
+          "package_name": "com.healthx.healthx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16338310275-bla8r9hl2lp63mlr89avsk12chsf9hsj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthx.healthx",
+            "certificate_hash": "b45698e3d67ff3bf662dd36ab178a98098f9f227"
+          }
+        },
+        {
+          "client_id": "16338310275-718750rrpdg3s2pplbhcrebmipvemd87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0RZYlIMOwDOyZKKZO_TzzhBMDUkMUor0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16338310275-718750rrpdg3s2pplbhcrebmipvemd87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
